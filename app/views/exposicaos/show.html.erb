@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @exposicao.pais %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @exposicao.cidade %>
+</p>
+
+<p>
+  <strong>Datas:</strong>
+  <%= @exposicao.datas %>
+</p>
+
+<%= link_to 'Edit', edit_exposicao_path(@exposicao) %> |
+<%= link_to 'Back', exposicaos_path %>
