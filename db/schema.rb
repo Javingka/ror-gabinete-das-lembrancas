@@ -11,12 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311210916) do
+ActiveRecord::Schema.define(version: 20150317191832) do
 
   create_table "exposicaos", force: true do |t|
     t.string   "pais"
     t.string   "cidade"
     t.string   "datas"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "objetos", force: true do |t|
+    t.string   "nome_objeto"
+    t.string   "nome_pessoa"
+    t.integer  "edade_pessoa"
+    t.text     "descripcao_breve"
+    t.text     "descripcao_longa"
+    t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

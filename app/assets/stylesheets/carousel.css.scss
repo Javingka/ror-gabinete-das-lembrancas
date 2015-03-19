@@ -1,40 +1,78 @@
 
 /* BOOTSTRAP 3.x GLOBAL STYLES
 -------------------------------------------------- */
-body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
+html, body { 
+  margin:0;
+  padding:0;background:#000;
+  line-height:1;
+  font-family:'Museo-500', Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }
 
+.contenido_central_app{
+  background-color:#fff;
+}
+/* Map */
+
+.map {
+    height: 500px;
+}
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+p{
+  font-family: 'Museo-500';
+}
+.text-titulo-inicial {
+  font-family: 'Museo-500';
+  color: #eee;
+  text-align: center;
+}
 /* CUSTOMIZE PAGE INICIAL */
 .text-vertical-center {
   font-family: 'Museo-500';
     color: #eee;
     display: table-cell;
     text-align: center;
-    vertical-align: middle;
+  /*  vertical-align: middle;*/
 }
 
 .text-vertical-center h1 {
   font-family: 'Museo-500';
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    font-size: 4.5em;
-    font-weight: 700;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+  text-align:center;
+
 }
-.text-vertical-about-titulo h2 p {
+.text-vertical-about-titulo h2 {
     font-family: 'Museo-500';
     color: #000;
-    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 20px;
     padding: 0;
-    font-size: 4.5em;
+    font-size: 25px;
     font-weight: 700;
 }
 .text-vertical-about {
   font-family: 'Museo-500';
-    color: #fff;
-    margin: 0;
+    color: #000;
+    margin: 0px 10px 0px 10px;
     padding: 0;
     font-size: 18px;
     font-weight: 100;
@@ -104,6 +142,13 @@ body {
   color: #fff;
   text-shadow: 0 1px 1px rgba(0,0,0,.3);
 }
+.lead_longo {
+  font-size: 15px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  text-align: justify;
+}
 .carousel-caption .btn {
   margin-top: 10px;
 }
@@ -160,14 +205,20 @@ div .jumbotron {
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 20px 0; /* Space out the Bootstrap <hr> more */
 }
 .featurette {
-  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+  position:relative;
   overflow: hidden; /* Vertically center images part 2: clear their floats. */
+  
 }
 .featurette-image {
-  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+  vertical-align: middle;
+  width:100%;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
 }
 
 /* Give some space on the sides of the floated elements so text doesn't run right into it. */
@@ -179,16 +230,52 @@ div .jumbotron {
 }
 .featurette .lead {
   font-size: 18px;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-size: 40px;
+  margin-top: 10px;
+  margin-right: 5%;
+  text-align: center;
+  font-size: 25px;
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
 }
-
-
+.caption {
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgba(120, 120, 120, 0.75);
+    width:100%;
+    height:200px;
+    padding:5px;
+    display: none;
+    text-align:center;
+    border-radius: 10px 10px 0px 0px;
+    color:#fff !important;
+    z-index:2;
+}
+.caption-ext {
+    margin-top: 200px;
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgba(120, 120, 120, 0.75);
+    width:100%;
+    height:100%;
+    padding:5px;
+    display: none;
+    text-align:center;
+    border-radius: 0px 0px 10px 10px;
+    color:#fff !important;
+    z-index:2;
+}
+.text-nome{
+  font-size: 20px;
+  color:#232323;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'objetos/new'
+
+  get 'objetos/index'
+
   get 'static_pages/home'
 
   get 'static_pages/infinitos_monos'

@@ -4,6 +4,7 @@
 
 ready = ->
 	carouselTime()
+	scrollFunction()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
@@ -14,3 +15,21 @@ carouselTime = ->
  		interval: 1000 * 10
 	});
 
+#jQuery for page scrolling feature - requires jQuery Easing plugin
+scrollFunction = ->
+  $('a.page-scroll').bind 'click', (event) ->
+    $anchor = $(this)
+    $('html, body').stop().animate { scrollTop: $($anchor.attr('href')).offset().top }, 1500, 'easeInOutExpo'
+    event.preventDefault()
+
+#codigo da animação sobre as imagens da exposição
+  $("[rel='tooltip']").tooltip()
+  $(".featurette").hover (->
+    $(this).find(".caption").slideDown 250 #.fadeIn(250)
+  ), ->
+    $(this).find(".caption").slideUp 250 #.fadeOut(205)
+    $(this).find(".caption-ext").slideUp 250
+
+  $(".go-ext").on "click", (event) ->
+    $(".featurette").find(".caption-ext").slideDown 250
+    $(this).css("display: none;")
