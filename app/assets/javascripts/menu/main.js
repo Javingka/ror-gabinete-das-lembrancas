@@ -6,8 +6,4 @@
 		$('#theMenu').toggleClass('menu-open');
 	});
 
-	$('#menuToggle').on('click', function(){
-		$('.text-vertical-about').css('background-color:#000;')
-
-	});
 })(jQuery)
