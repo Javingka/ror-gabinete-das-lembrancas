@@ -1,60 +1,11 @@
-<!--
-<div class="navbar-wrapper">
-  <div class="container">
-
-    <nav class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-         	  <span class="sr-only">Toggle navigation</span>
-         	  <span class="icon-bar"></span>
-         	  <span class="icon-bar"></span>
-         	  <span class="icon-bar"></span>
-           </button>
-           <a class="navbar-brand" href="#">Gabinete das Lembranças</a>
-         </div>
-         <div id="navbar" class="navbar-collapse collapse">
-           <ul class="nav navbar-nav">
-             <li class="active"><a href="#">home</a></li>
-             <li><a href="#about">Infinitos Monos</a></li>
-             <li><a href="#contact">contact</a></li>
-             <li class="dropdown">
-         			 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">dropdown <span class="caret"></span></a>
-               <ul class="dropdown-menu" role="menu">
-             	  <li><a href="#">action</a></li>
-             	  <li><a href="#">another action</a></li>
-             	  <li><a href="#">something else here</a></li>
-             	  <li class="divider"></li>
-             	  <li class="dropdown-header">nav header</li>
-             	  <li><a href="#">separated link</a></li>
-             	  <li><a href="#">one more separated link</a></li>
-             	 </ul>
-              </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-  </div>
-</div>
-<header id="top" class="header">
-  <div class="text-vertical-center">
-    <h1> Gabinete das Lembranças </h1>
-    <h3> Objetos significativos </h3>
-    <br>
-    <a href="#mycarousel" class="btn btn-lg btn-primary page-scroll">Exposições</a>
-    <a href="#about" class="btn btn-lg btn-primary page-scroll">Acerca do projeto</a>
-  </div>
-</header>-->
-
   <!-- Menu -->
   <nav class="menu" id="theMenu">
     <div class="menu-wrap">
-      <h1 class="logo"><%= link_to "Gabinete das Lembranças", root_path + "#h", class: "smoothScroll", role: "button" %></h1>
+      <h1 class="logo"><%= link_to "Gabinete das Lembranças", root_path, class: "smoothScroll", role: "button", method: :get %></h1>
       <i class="icon-remove menu-close"></i>
       <%= link_to "Exposições", exposicaos_path, class: "smoothScroll" %> 
       <a href="#portfolio" class="smoothScroll">Infinitos Monos</a>
-      <a href="#contact" class="smoothScroll">Contact</a>
+      <a href="http://0.0.0.0:3000/" class="smoothScroll">Contact</a>
       <%= link_to "Rio de Contas", static_pages_rio_de_contas_path+"#expo-rio", class: "smoothScroll", role: "button" %>
       <a href="#"><i class="icon-facebook"></i></a>
       <a href="#"><i class="icon-twitter"></i></a>
@@ -63,7 +14,7 @@
     </div>
     
     <!-- Menu button -->
-    <div id="menuToggle"><i class="icon-reorder"></i></div>
+    <div id="menuToggle"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span></div>
   </nav>
 
     <!-- Bootstrap core JavaScript

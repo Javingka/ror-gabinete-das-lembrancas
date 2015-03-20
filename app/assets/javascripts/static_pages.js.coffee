@@ -5,9 +5,9 @@
 ready = ->
 	carouselTime()
 	scrollFunction()
-
-$(document).ready(ready)
-$(document).on('page:load', ready)
+  
+$(document).ready ready
+$(document).on "page:load", ready
 
 # interval is in milliseconds. 1000 = 1 second - so 1000 * 10 = 10 seconds
 carouselTime = ->
@@ -33,3 +33,7 @@ scrollFunction = ->
   $(".go-ext").on "click", (event) ->
     $(".featurette").find(".caption-ext").slideDown 250
     $(this).css("display: none;")
+
+
+
+  

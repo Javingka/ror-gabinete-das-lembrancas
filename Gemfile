@@ -13,6 +13,9 @@ group :production do
   gem 'rails_12factor'
 end 
 
+#intento de solucionar que se requiera reload para BigVideo
+gem 'jquery-turbolinks'
+
 # incluimos bootstramp 
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'sass-rails', '>= 3.2'
