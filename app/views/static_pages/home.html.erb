@@ -19,7 +19,11 @@ $(function() {
   if (Modernizr.touch) {
     BV.show('http://static.wixstatic.com/media/ba2abc_64e396e2c51d4540a5a8d52e35343a17.jpg_srb_p_1045_587_75_22_0.50_1.20_0.00_jpg_srb');
 } else {
-     BV.show("<%= request.protocol + request.host_with_port + asset_path('river.mp4') %>",{ambient:true});
+         BV.show([
+        { type: "video/mp4",  src: "<%= request.protocol + request.host_with_port + asset_path('river.mp4') %>" },
+        { type: "video/webm", src: "<%= request.protocol + request.host_with_port + asset_path('river.webm') %>" },
+        { type: "video/ogg",  src: "<%= request.protocol + request.host_with_port + asset_path('river.ogg') %>" }
+    ],{ambient:true});
 }
 
  
