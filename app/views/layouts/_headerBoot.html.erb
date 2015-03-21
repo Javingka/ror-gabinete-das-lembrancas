@@ -20,7 +20,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script data-turbolinks-track="true" src="/assets/menu/classie.js?body=1"></script>     
-    <script data-turbolinks-track="true" src="/assets/menu/smoothscroll.js?body=1"></script>     
-    <script data-turbolinks-track="true" src="/assets/menu/main.js?body=1"></script>     
-
+    <script data-turbolinks-track="true" src="<%= request.protocol + request.host_with_port + asset_path('javascripts/menu/classie.js') %>"></script>
+    <script data-turbolinks-track="true" src="<%= request.protocol + request.host_with_port + asset_path('javascripts/menu/smoothscroll.js') %>"></script> 
+    <script data-turbolinks-track="true" src="<%= request.protocol + request.host_with_port + asset_path('javascripts/menu/main.js') %>"></script>     

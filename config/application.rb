@@ -23,5 +23,6 @@ module Gabineteweb
     # Enable the asset pipeline
     config.assets.enabled = true
     config.assets.paths << "#{Rails.root}/app/assets/videos"
+    config.assets.paths << "#{Rails.root}/app/assets"
   end
 end
